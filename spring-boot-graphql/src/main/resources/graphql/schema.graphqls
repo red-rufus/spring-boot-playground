@@ -1,0 +1,32 @@
+type Mutation{
+    createBook(book:BookInput):Book
+}
+
+type Query{
+    allBooks:[Book]
+    getBook(bookId:Int):Book
+}
+
+type Book{
+    id:ID!
+    title:String
+    author:Author
+    price:Float
+    pages:Int
+}
+
+type Author{
+    id:ID!
+    name:String
+}
+
+input BookInput{
+    title:String
+    author:AuthorInput
+    price:Float
+    pages:Int
+}
+
+input AuthorInput{
+    name:String
+}
