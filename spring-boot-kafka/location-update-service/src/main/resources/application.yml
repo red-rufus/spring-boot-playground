@@ -1,0 +1,12 @@
+server.port: 8081
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+springdoc:
+  swagger-ui.path: /swagger-ui.html # Change the default Swagger UI HTML path
+  api-docs.path: /v3/api-docs # Change the default OpenAPI specification JSON endpoint path

@@ -8,6 +8,7 @@ A collection of Spring Boot learning projects exploring backend technologies.
 |---|---|
 | spring-boot-graphql | Spring GraphQL, JPA, H2 |
 | spring-boot-webflux | Spring Webflux, R2DBC, H2 |
+| spring-boot-kafka | Spring Web, Spring Kafka |
 
 ## Tech Stack
 
@@ -16,3 +17,4 @@ A collection of Spring Boot learning projects exploring backend technologies.
 - JPA/Hibernate
 - webflux
 - R2DBC
+- Kafka

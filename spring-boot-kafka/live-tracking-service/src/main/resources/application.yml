@@ -1,0 +1,24 @@
+server.port: 8082
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      auto-offset-reset: earliest
+      properties:
+        spring.json.trusted.packages: "*"
+
+    streams:
+      application-id: location-tracker-streams
+      properties:
+        default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+        default.value.serde: com.eventdriven.app.serde.LocationSerde
+        spring.json.trusted.packages: "*"
+        # This tells the stream to log deserialization errors and skip the bad message.
+        default.deserialization.exception.handler: org.apache.kafka.streams.errors.LogAndContinueExceptionHandler
+
+springdoc:
+  swagger-ui.path: /swagger-ui.html # Change the default Swagger UI HTML path
+  api-docs.path: /v3/api-docs # Change the default OpenAPI specification JSON endpoint path
+
+logging.level:
+    org.apache.kafka.streams: INFO
