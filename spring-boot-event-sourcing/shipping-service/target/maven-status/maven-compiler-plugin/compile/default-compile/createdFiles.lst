@@ -1,0 +1,6 @@
+com\eventdriven\app\ShippingServiceApplication.class
+com\eventdriven\app\dto\enums\OrderStatus.class
+com\eventdriven\app\entity\OrderEvent.class
+com\eventdriven\app\service\ShippingEventService.class
+com\eventdriven\app\repository\OrderEventRepository.class
+com\eventdriven\app\controller\ShippingController.class
